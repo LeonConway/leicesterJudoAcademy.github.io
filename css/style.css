@@ -1,0 +1,1270 @@
+/* --- Basic Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+}
+
+/* Container for the icons */
+.social-links {
+    display: flex;
+    gap: 15px; /* Space between the icons */
+}
+
+/* Base style for the icon circles */
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #1a365d; /* Professional deep navy */
+    color: #ffffff; /* White icon color */
+    border-radius: 50%; /* Makes them perfect circles */
+    text-decoration: none;
+    font-size: 1.2rem; /* Size of the icon */
+    transition: all 0.3s ease; /* Smooth animation for hover */
+}
+
+/* Hover effect */
+.social-links a:hover {
+    background-color: #e53e3e; /* Action red on hover */
+    color: #ffffff;
+    transform: translateY(-4px); /* Slight bounce up effect */
+    box-shadow: 0 5px 15px rgba(229, 62, 62, 0.4); /* Subtle red glow */
+}
+
+/* --- Header Banner Style --- */
+.hero-header {
+    /* Flexbox handles the left/right layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Adds spacing on the sides */
+    padding: 40px 60px; 
+    
+    /* Sets the height of the banner */
+    height: 100px; 
+    
+    /* Adds the blue tint overlay and a placeholder background image */
+    background-color: #0c1a36;
+    
+}
+
+/* --- Logo Style --- */
+.logo img {
+    width: 80px;
+    height: auto;
+    /* Optional: If your logo is white with a transparent background, 
+       it will drop right in perfectly! */
+    filter: brightness(0) invert(1);
+}
+
+/* --- Navigation Styles --- */
+.main-nav ul {
+    list-style: none; /* Removes bullet points */
+    display: flex;    /* Lines up links horizontally */
+    gap: 30px;        /* Space between each link */
+    align-items: center;
+}
+
+.main-nav a {
+    text-decoration: none; /* Removes default link underline */
+    color: #ffffff;        /* White text */
+    font-size: 16px;
+    padding-bottom: 5px;   /* Space between text and the active underline */
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+.main-nav a:hover {
+    opacity: 0.7;
+}
+
+/* --- Active Link Style (The Underline) --- */
+.main-nav a.active {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* --- Footer Styles --- */
+.site-footer {
+    background-color: #0c1a36; /* Deep dark blue background */
+    padding: 60px 40px 40px;   /* Top padding, Side padding, Bottom padding */
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1000px;         /* Keeps the content from stretching too far on big screens */
+    margin: 0 auto;            /* Centers the container on the page */
+}
+
+/* --- Social Icons --- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    transition: opacity 0.3s ease;
+    /* This makes the icons white if they aren't already! */
+    filter: brightness(0) invert(1); 
+}
+
+.social-links a:hover img {
+    opacity: 0.7;
+}
+
+/* --- Footer Navigation --- */
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: underline;        /* Adds the underline */
+    text-underline-offset: 6px;        /* Pushes the underline slightly down */
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 0.7;
+}
+
+/* --- Divider Line --- */
+.footer-divider {
+    border: none;
+    border-top: 2px solid #ffffff;
+    margin-bottom: 40px;
+}
+
+/* --- Footer Bottom (Logo and Text) --- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; /* Pushes logo left and text right */
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 80px; /* Slightly smaller than the header logo */
+    height: auto;
+    filter: brightness(0) invert(1); /* Makes your logo white */
+}
+
+.footer-legal {
+    font-size: 14px;
+}
+
+.footer-legal a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-legal a:hover {
+    opacity: 0.7;
+}
+
+
+
+
+/* --- Connected Section - Updated for Seamless Blend --- */
+.connected-section {
+    position: relative; /* Allows side panels to stick to the edges */
+    
+    /* 1. APPLYING THE HEADER BLEND */
+    /* Must match the gradient and image used in your .hero-header precisely */
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75), /* Top blue tint */
+        rgba(15, 40, 90, 0.9)    /* Bottom darker blue tint */
+    ), 
+    url('../assets/Judoimage1.jpg') no-repeat center center/cover;
+    /* (Ensure this path still points to your intended background image) */
+    
+    padding: 80px 0 120px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+/* --- Center Content & Heading --- */
+.center-content {
+    width: 80%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 56px;
+    font-weight: bold;
+    color: #ffffff; /* Changed to white for dark background */
+    margin-bottom: 50px;
+    letter-spacing: -1px;
+}
+
+/* --- Video Wrapper & Rounded Thumbnail --- */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    
+    /* 2. ROUNDING THE CORNERS */
+    border-radius: 30px; /* Adjust this number to make it more or less rounded */
+    
+    overflow: hidden; /* CRITICAL: This ensures the image inside gets cropped by the rounded corners */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* Stronger shadow for depth on dark BG */
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Play Button (unchanged) --- */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 70px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.play-triangle {
+    width: 0; 
+    height: 0; 
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid #1a1a1a; 
+    margin-left: 8px;
+}
+
+/* --- Vertical Side Panels (Updated for White Text) --- */
+.side-panel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff; /* Changed to white for dark background */
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.left-panel { left: 40px; }
+.right-panel { right: 40px; }
+
+.side-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.side-icons a {
+    color: #ffffff; /* Changed to white */
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.side-icons a:hover { opacity: 0.7; }
+
+.arrows span { font-size: 10px; }
+
+.vertical-line {
+    width: 2px;
+    height: 30px;
+    background-color: #ffffff; /* Changed to white */
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); 
+}
+
+.plus-sign {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+/* JUDO SCHEDULE STYLES */
+.judo-schedule-section {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    color: #333;
+}
+
+.schedule-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.schedule-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0c1a36;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.schedule-subtitle {
+    text-align: center;
+    color: #0c1a36;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Hide the radio buttons used for logic */
+input[name="schedule-filter"] {
+    display: none;
+}
+
+/* Interactive Filter Buttons */
+.schedule-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    background-color: #e2e8f0;
+    color: #0c1a36;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.filter-btn:hover {
+    background-color: #cbd5e1;
+}
+
+/* Filtering Logic (Pure CSS) */
+#filter-all:checked ~ .schedule-filters .filter-btn[for="filter-all"],
+#filter-juniors:checked ~ .schedule-filters .filter-btn[for="filter-juniors"],
+#filter-seniors:checked ~ .schedule-filters .filter-btn[for="filter-seniors"],
+#filter-nogi:checked ~ .schedule-filters .filter-btn[for="filter-nogi"] {
+    background-color: #0c1a36; /* Judo Red Accent */
+    color: white;
+    box-shadow: 0 4px 6px rgba(48, 83, 197, 0.3);
+}
+
+/* Hide classes based on selection */
+#filter-juniors:checked ~ .schedule-grid .class-card:not(.juniors) {
+    display: none;
+}
+#filter-seniors:checked ~ .schedule-grid .class-card:not(.seniors) {
+    display: none;
+}
+#filter-nogi:checked ~ .schedule-grid .class-card:not(.nogi) {
+    display: none;
+}
+
+/* Grid Layout */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+.schedule-day {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #0c1a36; /* Tatami Blue */
+}
+
+.schedule-day h3 {
+    text-align: center;
+    margin-top: 0;
+    color: #0c1a36;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Class Cards */
+.class-card {
+    background: #f7fafc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #cbd5e1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.class-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Hover effects for interactivity */
+.class-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(29, 36, 94, 0.1);
+    border-left-color: #0e3480; /* Red hover accent */
+}
+
+/* Color coding for categories */
+.class-card.juniors {
+    border-left-color: #38a169; /* Green for Juniors */
+}
+
+.class-card.seniors {
+    border-left-color: #0c1a36; /* Blue for Seniors */
+}
+
+.class-card.nogi {
+    border-left-color: #2d3748; /* Dark Grey for No-Gi */
+}
+
+/* Typography inside cards */
+.class-card .time {
+    display: block;
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.class-card h4 {
+    margin: 0 0 5px 0;
+    color: #1a202c;
+    font-size: 1.1rem;
+}
+
+.class-card .instructor {
+    font-size: 0.85rem;
+    color: #0c1a36;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .schedule-title {
+        font-size: 2rem;
+    }
+    .schedule-day {
+        margin-bottom: 10px;
+    }
+}
+
+/* === Dojo Location Section Styles === */
+.dojo-location-section {
+  padding: 80px 20px;
+  background-color: #f8f9fa; /* Light grey background to make the card pop */
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.location-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: stretch; /* Makes both card and map equal height */
+}
+
+/* Address Card Styling */
+.address-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid #1a365d; /* Professional deep blue accent */
+}
+
+.address-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+  padding: 40px;
+}
+
+.address-card h2 {
+  font-size: 1.2rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.business-name {
+  font-size: 2rem;
+  color: #1a365d;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* Info Groups (Icons + Text) */
+.info-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.info-group svg {
+  color: #e53e3e; /* Action red color for icons */
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-group p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-link {
+  color: #2b6cb0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #e53e3e;
+  text-decoration: underline;
+}
+
+/* Training Hours Section */
+.training-hours {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.training-hours h4 {
+  color: #1a365d;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.training-hours ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.training-hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.training-hours li:last-child {
+  border-bottom: none;
+}
+
+.training-hours li span:first-child {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+/* Map Container Styling */
+.map-container {
+  flex: 1.5; /* Takes up slightly more space than the card */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  min-height: 400px; /* Ensures the map doesn't collapse */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive Design for Mobile and Tablets */
+@media (max-width: 900px) {
+  .location-wrapper {
+    flex-direction: column;
+  }
+  
+  .map-container {
+    min-height: 350px;
+  }
+  
+  .card-content {
+    padding: 30px 20px;
+  }
+}
+
+
+
+/* Membership Section Base Styles */
+.membership-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa00;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.membership-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.membership-title {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.membership-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout for Cards */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+/* Individual Card Styling */
+.pricing-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 6px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Interactive Hover Effect */
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Tier Specific Colors */
+.card-bronze { border-color: #cd7f32; }
+.card-silver { border-color: #c0c0c0; }
+.card-gold { border-color: #ffd700; }
+
+/* Card Typography */
+.tier-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.card-bronze .tier-name { color: #cd7f32; }
+.card-silver .tier-name { color: #9ea0a1; } 
+.card-gold .tier-name { color: #d4af37; }
+
+.tier-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  min-height: 50px; 
+}
+
+.tier-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+/* Features List */
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1; 
+}
+
+.tier-features li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: 1rem;
+}
+
+.tier-features li:last-child {
+  border-bottom: none;
+}
+
+/* Call to Action Button */
+.join-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid #2c3e50;
+  color: #2c3e50;
+  background-color: transparent;
+}
+
+.join-btn:hover {
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+
+/* Special Highlight for Gold */
+.card-gold .join-btn {
+  background-color: #d4af37;
+  border-color: #d4af37;
+  color: #fff;
+}
+
+.card-gold .join-btn:hover {
+  background-color: #b5952f;
+  border-color: #b5952f;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .membership-section {
+    padding: 40px 15px;
+  }
+  .membership-title {
+    font-size: 2rem;
+  }
+}
+
+
+/* Container styling to sit between your header and footer */
+.moving-text-section {
+  width: 100%;
+  overflow: hidden; /* Hides the text that goes off-screen */
+  background-color: #f8f9fa; /* Light professional gray, change as needed */
+  padding: 4rem 0; /* Gives the text room to breathe vertically */
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* The wrapper that actually moves */
+.moving-text-inner {
+  display: inline-block;
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  /* Starts halfway off-screen to the left, moves to 0 */
+  animation: moveLeftToRight 20s linear infinite; 
+}
+
+/* The text styling */
+.moving-text-inner span {
+  display: inline-block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Professional sans-serif */
+  font-size: 5vw; /* Scales with the screen size. Use a fixed rem/px if preferred */
+  font-weight: 800; /* Extra bold */
+  letter-spacing: -0.02em; /* Tighter letter spacing looks modern */
+  color: #212529; /* Very dark gray instead of pure black */
+  text-transform: uppercase;
+  padding-right: 1rem; /* Space before the loop restarts */
+}
+
+/* The Animation Keyframes */
+@keyframes moveLeftToRight {
+  0% {
+    /* Start exactly halfway shifted to the left */
+    transform: translateX(-50%);
+  }
+  100% {
+    /* End at the resting position */
+    transform: translateX(0%);
+  }
+}
+
+/* 1. Prep the parent container so the image stays inside */
+.judo-schedule-section {
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* 2. Position and blend the image */
+.judo-bg-graphic {
+    position: absolute;
+    top: 50%;
+    right: -2%; /* Tweak this if you want it closer or further to the edge */
+    transform: translateY(-50%);
+    width: 60%; /* Takes up the right side of the screen */
+    height: 100%;
+    min-height: 800px; /* Gives the throw plenty of room */
+    
+    /* Update this path if your image is stored somewhere else */
+    background-image: url('../assets/craigUchimata.png'); 
+    background-size: contain; 
+    background-position: right center;
+    background-repeat: no-repeat;
+    
+    /* Blending & Layering */
+    opacity: 0.15; /* The transparency of the watermark */
+    z-index: 0; /* Pushes it behind the schedule cards */
+    pointer-events: none; /* VERY IMPORTANT: Allows clicks to pass through to your buttons */
+    mix-blend-mode: multiply; /* Makes the white parts of the JPG transparent */
+}
+
+.judo-other-bg-graphic {
+    position: absolute;
+    top: 50%;
+    right: -2%; /* Tweak this if you want it closer or further to the edge */
+    transform: translateY(-50%);
+    width: 60%; /* Takes up the right side of the screen */
+    height: 100%;
+    min-height: 800px; /* Gives the throw plenty of room */
+    
+    /* Update this path if your image is stored somewhere else */
+    background-image: url('../assets/craigKata.png'); 
+    background-size: contain; 
+    background-position: right center;
+    background-repeat: no-repeat;
+    
+    /* Blending & Layering */
+    opacity: 0.15; /* The transparency of the watermark */
+    z-index: 0; /* Pushes it behind the schedule cards */
+    pointer-events: none; /* VERY IMPORTANT: Allows clicks to pass through to your buttons */
+    mix-blend-mode: multiply; /* Makes the white parts of the JPG transparent */
+}
+
+/* 3. Bring the schedule container to the front */
+.schedule-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Main Section Wrapper */
+.judo-about-section {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fcfcfc00;
+  color: #333333;
+  padding: 80px 20px;
+  line-height: 1.7;
+}
+
+/* Flex Container for Layout */
+.judo-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Desktop Two-Column Layout */
+@media (min-width: 992px) {
+  .judo-about-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Image Styling */
+.judo-about-image-wrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 450px;
+}
+
+.judo-about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-bottom: 6px solid #0c1a36; /* Deep Judo Red */
+  object-fit: cover;
+}
+
+/* Content Area */
+.judo-about-content {
+  flex: 1.5;
+}
+
+.judo-accent-text {
+  display: block;
+  color: #0c1a36;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.judo-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 5px 0;
+  line-height: 1.2;
+}
+
+.about-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #071382;
+  margin: 0 0 30px 0;
+  border-left: 4px solid #0c1a36;
+  padding-left: 12px;
+}
+
+/* Stat Banners */
+.judo-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.judo-stat {
+  background: #ffffff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  border: 1px solid #eaeaea;
+}
+
+.judo-stat strong {
+  color: #0c1a36;
+  font-weight: 700;
+}
+
+/* Paragraph Text */
+.judo-about-content p {
+  margin-bottom: 22px;
+  color: #4a4a4a;
+  text-align: justify;
+  font-size: 1.05rem;
+}
+
+.judo-about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.judo-about-content p strong {
+  color: #1a1a1a;
+}
+
+/* Center Content Hero Styling */
+.center-content {
+    /* Ensure the parent container supports centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allows it to fill the space between your side panels */
+    padding: 2rem;
+}
+
+.judo-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+.judo-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.judo-title {
+    font-size: clamp(3rem, 5vw, 5rem); /* Responsive font sizing */
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.judo-title .highlight {
+    color: #ffffff; /* Deep Martial Arts Red */
+}
+
+.judo-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0 auto 35px auto;
+    max-width: 600px;
+}
+
+/* About / Paragraph Section Styling */
+.judo-about-section {
+    max-width: 800px;
+    margin: 4rem auto; /* Creates comfortable breathing room */
+    padding: 2rem;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+
+/* Header & Watermark */
+.about-header {
+    text-align: left;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.kanji-watermark {
+    position: absolute;
+    top: -50px;
+    left: -15px;
+    font-size: 6rem;
+    color: rgba(0, 0, 0, 0.297); /* Extremely subtle background text */
+    font-weight: bold;
+    z-index: 0;
+    user-select: none; /* Prevents users from highlighting it */
+}
+
+.about-title {
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: #111;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.title-underline {
+    height: 4px;
+    width: 60px;
+    background-color: #093285; /* Deep Martial Arts Red */
+}
+
+/* Typography & Layout */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+    border-left: 4px solid #D32F2F;
+    padding-left: 1.5rem;
+}
+
+.body-text {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* --- High-Contrast / Editorial Contact Section --- */
+
+.judo-contact-section {
+    max-width: 650px;
+    margin: 6rem auto;
+    padding: 0 1.5rem;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+/* 1. Asymmetrical, Magazine-Style Header */
+.contact-header {
+    text-align: left;
+    margin-bottom: 4rem;
+    border-left: 6px solid #093285; /* Heavy red accent line */
+    padding-left: 1.5rem;
+}
+
+.contact-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* Much larger, tighter text */
+    font-weight: 900;
+    color: #000;
+    line-height: 1;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: -2px; /* Tight tracking for an aggressive, modern look */
+}
+
+/* Hide the old centered underline since we use a side border now */
+.contact-header .title-underline {
+    display: none; 
+}
+
+.contact-subtitle {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 400;
+}
+
+.contact-subtitle strong {
+    color: #000;
+    background-color: #f4f4f4; /* Highlights the contact info like marker text */
+    padding: 2px 6px;
+}
+
+/* 2. Form Container - Stripped Back & Raw */
+.contact-form-container {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+.judo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* Wide breathing room between inputs */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+/* 3. Typography-Driven Labels */
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Wide tracking for labels */
+    margin-bottom: 0.5rem;
+}
+
+/* 4. "Paper-Sheet" Inputs (No boxes, just hard bottom lines) */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 3px solid #000; /* Stark black lines */
+    border-radius: 0; /* Removing AI's favorite rounded corners */
+    font-family: inherit;
+    font-size: 1.2rem;
+    background-color: transparent;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box; 
+    color: #000;
+}
+
+/* Remove resize handle from text area for cleaner look */
+.form-group textarea {
+    resize: none; 
+}
+
+/* 5. Minimalist Focus State */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-bottom: 3px solid #093285; /* Snaps to red, no soft glowing shadows */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* 6. "Neo-Brutalist" Submit Button */
+.form-submit {
+    align-self: flex-start;
+    padding: 18px 40px;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 0; /* Sharp corners */
+    cursor: pointer;
+    transition: all 0.1s ease; /* Fast, snappy transition */
+    
+    /* Hard offset shadow - very trendy in modern UI design right now */
+    box-shadow: 6px 6px 0px #093285; 
+}
+
+.form-submit:hover {
+    /* The button visually clicks down into the shadow */
+    transform: translate(6px, 6px);
+    box-shadow: 0px 0px 0px #093285;
+    background-color: #093285;
+    border-color: #093285;
+}
+
+.form-submit:focus {
+    outline: none;
+}
